@@ -55,3 +55,9 @@ function draw(e) {
 function stopDrawing() {
     isDrawing = false
 }
+
+ctx.strokeStyle = colorPicker.value;
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
