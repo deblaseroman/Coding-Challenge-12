@@ -6,22 +6,13 @@ let isDrawing = false;
 let startX = 0;
 let startY = 0;
 
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', stopDrawing);
 
-canvas.onmousedown = function(e) {
+function startDrawing(e) {
     isDrawing = true;
     startX = e.offsetX;
     startY = e.offsetY;
-};
-
-
-canvas.onmousemove = function(e) {
-    if (!isDrawing) return;
-
-
-    let selectedTool = document.querySelector('input[name="tool"]:checked').value;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.beginPath();
 }
    
