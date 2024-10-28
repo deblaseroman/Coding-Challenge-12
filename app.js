@@ -19,15 +19,9 @@ canvas.onmousemove = function(e) {
 
 
     let selectedTool = document.querySelector('input[name="tool"]:checked').value;
-    
-  
-    let color = document.getElementById('colorPicker').value;
-    ctx.strokeStyle = color;
-
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
- 
     ctx.beginPath();
 }
    
