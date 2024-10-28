@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drawing App</title>
+    <style>
+     
+        canvas {
+            border: 1px solid black;
+        }
+        .controls {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--  controls  -->
+    <div class="controls">
+        <input type="radio" name="tool" value="line" checked> Line
+        <input type="radio" name="tool" value="rectangle"> Rectangle
+        <input type="radio" name="tool" value="circle"> Circle
+        <br><br>
+        Color: <input type="color" id="colorPicker">
+        <br><br>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+
+    <!-- canvas -->
+    <canvas id="drawingCanvas" width="500" height="400"></canvas>
+
+    <script
